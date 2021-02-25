@@ -20,6 +20,7 @@ let resetAccount = function (account) {
   account.income = 0;
 };
 
+// GET SUMMARY
 let accountSummary = function (account) {
   let balance = account.income - account.expenses;
 
@@ -32,5 +33,3 @@ addExpense(myAccount, 100);
 console.log(accountSummary(myAccount));
 resetAccount(myAccount);
 console.log(accountSummary(myAccount));
-
-// resetAccount(myAccount);
