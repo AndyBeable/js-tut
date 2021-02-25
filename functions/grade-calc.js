@@ -23,8 +23,8 @@ console.log(studentOne);
 
 // REFACTOR
 
-let gradeCalc2 = function (studentScore, maxScore = 20) {
-  let score = (studentScore / maxScore) * 100;
+const gradeCalc2 = function (studentScore, maxScore = 20) {
+  const percent = (studentScore / maxScore) * 100;
   let letterGrade = '';
 
   if (score >= 90) {
@@ -33,8 +33,8 @@ let gradeCalc2 = function (studentScore, maxScore = 20) {
     letterGrade = 'B';
   }
 
-  return `You got an ${letterGrade} ${score}%`;
+  return `You got an ${letterGrade} ${percent}%`;
 };
 
-let studentTwo = gradeCalc2(19);
-console.log(studentTwo);
+const result = gradeCalc2(19);
+console.log(result);
