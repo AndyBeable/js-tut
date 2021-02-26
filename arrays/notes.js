@@ -25,3 +25,8 @@ console.log(notes);
 
 notes.splice(1, 0, 'This is a new second item');
 console.log(notes);
+
+// FOR EACH
+notes.forEach(function (item, i) {
+  console.log(item, i);
+});
