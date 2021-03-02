@@ -21,20 +21,44 @@ const todos = [
   },
 ];
 
-// print summary message. you have 3 todos left for eg
+const filters = {
+  searchText: '',
+};
 
-const incompleteTodos = todos.filter(function (todo) {
-  return !todo.completed;
+const renderTodos = function (todos, filters) {
+  const filteredTodos = todos.filter(function (todo) {
+    return todo.text.toLowerCase().includes(filters.searchText.toLowerCase());
+  });
+
+  const incompleteTodos = filteredTodos.filter(function (todo) {
+    return !todo.completed;
+  });
+
+  document.querySelector('#todos').innerHTML = '';
+
+  const summary = document.createElement('h3');
+  summary.textContent = `You have ${incompleteTodos.length} things to do today`;
+  document.querySelector('#todos').appendChild(summary);
+
+  filteredTodos.forEach(function (todo) {
+    const p = document.createElement('p');
+    p.textContent = todo.text;
+    document.querySelector('#todos').appendChild(p);
+  });
+};
+
+renderTodos(todos, filters);
+
+// EVENT LISTENERS
+document.querySelector('#add-todo').addEventListener('click', function (e) {
+  console.log('Im trying to add a note');
 });
 
-const summary = document.createElement('h3');
-summary.textContent = `You have ${incompleteTodos.length} things to do today`;
-document.querySelector('body').appendChild(summary);
+document.querySelector('#new-todo').addEventListener('input', function (e) {
+  console.log(e.target.value);
+});
 
-// print paragraph for each todo above. Use text value for the visible content of the p tags.
-
-todos.forEach(function (todo) {
-  const p = document.createElement('p');
-  p.textContent = todo.text;
-  document.querySelector('body').appendChild(p);
+document.querySelector('#search-todo').addEventListener('input', function (e) {
+  filters.searchText = e.target.value;
+  renderTodos(todos, filters);
 });
