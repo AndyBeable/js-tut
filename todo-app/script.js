@@ -23,16 +23,18 @@ const todos = [
 
 // print summary message. you have 3 todos left for eg
 
-const getThingsTodoDo = function (todos) {
-  return todos.filter(function (todo) {
-    return !todo.completed;
-  });
-};
+const incompleteTodos = todos.filter(function (todo) {
+  return !todo.completed;
+});
 
-const incomplete = getThingsTodoDo(todos);
-
-const status = document.createElement('h3');
-status.textContent = `You have ${incomplete.length} things to do today`;
-document.querySelector('body').appendChild(status);
+const summary = document.createElement('h3');
+summary.textContent = `You have ${incompleteTodos.length} things to do today`;
+document.querySelector('body').appendChild(summary);
 
 // print paragraph for each todo above. Use text value for the visible content of the p tags.
+
+todos.forEach(function (todo) {
+  const p = document.createElement('p');
+  p.textContent = todo.text;
+  document.querySelector('body').appendChild(p);
+});
