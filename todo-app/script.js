@@ -50,15 +50,17 @@ const renderTodos = function (todos, filters) {
 renderTodos(todos, filters);
 
 // EVENT LISTENERS
-document.querySelector('#add-todo').addEventListener('click', function (e) {
-  console.log('Im trying to add a note');
-});
-
-document.querySelector('#new-todo').addEventListener('input', function (e) {
-  console.log(e.target.value);
-});
-
 document.querySelector('#search-todo').addEventListener('input', function (e) {
   filters.searchText = e.target.value;
   renderTodos(todos, filters);
+});
+
+document.querySelector('#new-todo').addEventListener('submit', function (e) {
+  e.preventDefault();
+  todos.push({
+    text: e.target.elements.text.value,
+    completed: false,
+  });
+  renderTodos(todos, filters);
+  e.target.elements.text.value = '';
 });
