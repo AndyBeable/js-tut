@@ -1,17 +1,19 @@
-function sayName() {
-  console.log('Andy');
-}
-
-sayName();
-
 function sum(a, b) {
-  console.log(a + b);
+  return a + b;
 }
 
-sum(4, 6);
+let total = sum(4, 6);
+console.log(total);
 
 function printName(name) {
   console.log(name);
 }
 
 printName('Iris');
+
+function sayName(name) {
+  return 'Hello' + ' ' + name;
+}
+
+let greet = sayName('Andy');
+console.log(greet);
