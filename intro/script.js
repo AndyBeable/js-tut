@@ -38,12 +38,40 @@
 
 // sumCallback(1, 2, handleSum);
 
-function sayHello(name, callback) {
-  callback('Hello ' + name);
-}
+// function sayHello(name, callback) {
+//   callback('Hello ' + name);
+// }
 
-function printVariable(variable) {
-  console.log(variable);
-}
+// function printVariable(variable) {
+//   console.log(variable);
+// }
 
-sayHello('Andy', printVariable);
+// sayHello('Andy', printVariable);
+
+// function sum(a, b) {
+//   return a + b;
+// }
+// console.log(sum(1, 2));
+
+// let sumArrow = (a, b) => {
+//   return a + b;
+// };
+
+// console.log(sumArrow(5, 10));
+
+// let sum2 = (a, b) => a + b;
+
+// console.log(sum2(2, 5));
+
+// let printName = (name) => {
+//   console.log(name);
+// };
+
+// printName('Andy');
+
+// function printHi(name) {
+//   return 'Hi ' + name;
+// }
+
+let printHi = (name) => 'Hi ' + name;
+console.log(printHi('Andy'));
