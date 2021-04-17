@@ -73,13 +73,39 @@
 //   return 'Hi ' + name;
 // }
 
-let printHi = (name) => 'Hi ' + name;
-console.log(printHi('Andy'));
+// let printHi = (name) => 'Hi ' + name;
+// console.log(printHi('Andy'));
 
-function func(x, callback) {
-  callback(x);
-}
+// function func(x, callback) {
+//   callback(x);
+// }
 
-func(10, (variable) => {
-  console.log(variable);
-});
+// func(10, (variable) => {
+//   console.log(variable);
+// });
+
+// function sum(a, b) {
+//   return a + b;
+// }
+
+// console.log(sum(1, 2));
+
+// ARRAYS
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log(numbers);
+
+const letters = ['a', 'b', 'c', 'd', 'e'];
+console.log(letters[2]);
+
+const a = [
+  [1, 2, 3, 4, 5],
+  [6, 7, 8, 9, 10],
+  [11, 12, 13, 14, 15],
+];
+
+console.log(a[0][3]);
+console.log(a[1][2]);
+console.log(a[2][0]);
+
+console.log(numbers.length);
