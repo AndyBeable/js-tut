@@ -92,20 +92,73 @@
 
 // ARRAYS
 
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-console.log(numbers);
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// console.log(numbers);
 
-const letters = ['a', 'b', 'c', 'd', 'e'];
-console.log(letters[2]);
+// const letters = ['a', 'b', 'c', 'd', 'e'];
+// console.log(letters[2]);
 
-const a = [
-  [1, 2, 3, 4, 5],
-  [6, 7, 8, 9, 10],
-  [11, 12, 13, 14, 15],
-];
+// const a = [
+//   [1, 2, 3, 4, 5],
+//   [6, 7, 8, 9, 10],
+//   [11, 12, 13, 14, 15],
+// ];
 
-console.log(a[0][3]);
-console.log(a[1][2]);
-console.log(a[2][0]);
+// console.log(a[0][3]);
+// console.log(a[1][2]);
+// console.log(a[2][0]);
 
-console.log(numbers.length);
+// console.log(numbers.length);
+
+// OBJECTS
+
+let name = 'Andy';
+const age = 32;
+const favouriteNumber = 7;
+
+let person = {
+  name: 'Andy',
+  age: 32,
+  favouriteNumber: 7,
+  sayHi: function () {
+    console.log('Hi');
+  },
+  sayHi2() {
+    console.log('Hi2');
+  },
+  address: {
+    street: 'Queenstown Road',
+    city: 'London',
+  },
+  hobbies: ['Cycling', 'Golf'],
+};
+
+console.log(person.address.street);
+console.log(person.hobbies[1]);
+
+person.sayHi2();
+
+const car = {
+  make: 'Ferrari',
+  model: 'LaFerrari',
+  isUsed: false,
+  makeNoise() {
+    console.log('Vrooom');
+  },
+};
+
+car.makeNoise();
+console.log(car.make, car.model, car.isUsed);
+
+const book = {
+  title: '1984',
+  author: {
+    name: 'George Orwell',
+    age: 67,
+  },
+};
+
+console.log(book.title, book.author.name, book.author.age);
+
+book.title = 'New Title';
+console.log(book.title);
