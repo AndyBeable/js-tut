@@ -154,7 +154,7 @@ const book = {
   title: '1984',
   author: {
     name: 'George Orwell',
-    age: 67,
+    age: 57,
   },
 };
 
@@ -162,3 +162,16 @@ console.log(book.title, book.author.name, book.author.age);
 
 book.title = 'New Title';
 console.log(book.title);
+
+// REFERNCE VS VALUE
+
+let a = 10;
+let b = 'Hi';
+let c = [1, 3];
+let d = c;
+d.push(3);
+
+console.log('a = ' + a);
+console.log('b = ' + b);
+console.log('c = ' + c);
+console.log('d = ' + d);
