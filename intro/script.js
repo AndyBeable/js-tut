@@ -112,66 +112,85 @@
 
 // OBJECTS
 
-let name = 'Andy';
-const age = 32;
-const favouriteNumber = 7;
+// let name = 'Andy';
+// const age = 32;
+// const favouriteNumber = 7;
 
-let person = {
-  name: 'Andy',
-  age: 32,
-  favouriteNumber: 7,
-  sayHi: function () {
-    console.log('Hi');
-  },
-  sayHi2() {
-    console.log('Hi2');
-  },
-  address: {
-    street: 'Queenstown Road',
-    city: 'London',
-  },
-  hobbies: ['Cycling', 'Golf'],
-};
+// let person = {
+//   name: 'Andy',
+//   age: 32,
+//   favouriteNumber: 7,
+//   sayHi: function () {
+//     console.log('Hi');
+//   },
+//   sayHi2() {
+//     console.log('Hi2');
+//   },
+//   address: {
+//     street: 'Queenstown Road',
+//     city: 'London',
+//   },
+//   hobbies: ['Cycling', 'Golf'],
+// };
 
-console.log(person.address.street);
-console.log(person.hobbies[1]);
+// console.log(person.address.street);
+// console.log(person.hobbies[1]);
 
-person.sayHi2();
+// person.sayHi2();
 
-const car = {
-  make: 'Ferrari',
-  model: 'LaFerrari',
-  isUsed: false,
-  makeNoise() {
-    console.log('Vrooom');
-  },
-};
+// const car = {
+//   make: 'Ferrari',
+//   model: 'LaFerrari',
+//   isUsed: false,
+//   makeNoise() {
+//     console.log('Vrooom');
+//   },
+// };
 
-car.makeNoise();
-console.log(car.make, car.model, car.isUsed);
+// car.makeNoise();
+// console.log(car.make, car.model, car.isUsed);
 
-const book = {
-  title: '1984',
-  author: {
-    name: 'George Orwell',
-    age: 57,
-  },
-};
+// const book = {
+//   title: '1984',
+//   author: {
+//     name: 'George Orwell',
+//     age: 57,
+//   },
+// };
 
-console.log(book.title, book.author.name, book.author.age);
+// console.log(book.title, book.author.name, book.author.age);
 
-book.title = 'New Title';
-console.log(book.title);
+// book.title = 'New Title';
+// console.log(book.title);
 
-// REFERNCE VS VALUE
+// // REFERNCE VS VALUE
 
-let a = 10;
-let b = 'Hi';
-let c = [1, 3];
-let d = c;
-d.push(3);
+// let a = 10;
+// let b = 'Hi';
+// let c = [1, 3];
+// let d = c;
+// d.push(3);
 
-console.log('a = ' + a);
-console.log('b = ' + b);
-console.log('c = ' + c);
-console.log('d = ' + d);
+// console.log('a = ' + a);
+// console.log('b = ' + b);
+// console.log('c = ' + c);
+// console.log('d = ' + d);
+
+// ARRAYS
+
+const a = [1, 2, 3, 4, 5];
+const b = [2, 4, 6, 8, 10];
+
+// a.forEach((number) => {
+//   console.log(number);
+// });
+
+// const newA = a.map((number) => {
+//   return number * 2;
+// });
+
+const newB = b.filter((number) => {
+  return number <= 8;
+});
+
+console.log(newB);
