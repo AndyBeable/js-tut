@@ -178,9 +178,9 @@
 
 // ARRAYS
 
-const a = [1, 2, 3, 4, 5];
-const b = [2, 4, 6, 8, 10];
-const c = [3, 4, 5, 6, 7];
+// const a = [1, 2, 3, 4, 5];
+// const b = [2, 4, 6, 8, 10];
+// const c = [3, 4, 5, 6, 7];
 
 // a.forEach((number) => {
 //   console.log(number);
@@ -211,16 +211,32 @@ const c = [3, 4, 5, 6, 7];
 
 // console.log(sum);
 
-const items = [
-  { price: 10 },
-  { price: 20 },
-  { price: 14 },
-  { price: 1 },
-  { price: 6 },
-];
+// const items = [
+//   { price: 10 },
+//   { price: 20 },
+//   { price: 14 },
+//   { price: 1 },
+//   { price: 6 },
+// ];
 
-const total = items.reduce((sum, item) => {
-  return sum + item.price;
-}, 0);
+// const total = items.reduce((sum, item) => {
+//   return sum + item.price;
+// }, 0);
 
-console.log(total);
+// console.log(total);
+
+// const d = [1, 2, 3, 4, 5];
+
+// const isTrue = d.includes(6);
+// console.log(isTrue);
+
+// STRING TEMPLATE LITERALS
+
+let a = 'Hello';
+let b = 'World';
+console.log(`${a} ${b}`);
+
+let firstName = 'Andy';
+let lastName = 'Beable';
+
+console.log(`${firstName} ${lastName}`);
