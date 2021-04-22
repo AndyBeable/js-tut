@@ -201,5 +201,8 @@ const c = [3, 4, 5, 6, 7];
 const isTrue = a.some((number) => {
   return number > 6;
 });
+const isTrue2 = a.every((number) => {
+  return number < 6;
+});
 
-console.log(isTrue);
+console.log(isTrue2);
