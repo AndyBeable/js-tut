@@ -232,11 +232,41 @@
 
 // STRING TEMPLATE LITERALS
 
-let a = 'Hello';
-let b = 'World';
-console.log(`${a} ${b}`);
+// let a = 'Hello';
+// let b = 'World';
+// console.log(`${a} ${b}`);
 
-let firstName = 'Andy';
-let lastName = 'Beable';
+// let firstName = 'Andy';
+// let lastName = 'Beable';
 
-console.log(`${firstName} ${lastName}`);
+// console.log(`${firstName} ${lastName}`);
+
+// NEW AND THIS KEYWORD
+
+// function createUser(name, age) {
+//   return { name: name, age: age, human: true };
+// }
+
+// function User(name, age) {
+//   this.name = name;
+//   this.age = age;
+//   this.human = true;
+// }
+
+// const user = new User('Iris', 31);
+// console.log(user);
+
+class User {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+    this.human = true;
+  }
+
+  printName() {
+    console.log(this.name);
+  }
+}
+
+const user = new User('Dave', 30);
+user.printName();
