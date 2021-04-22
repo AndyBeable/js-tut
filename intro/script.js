@@ -194,8 +194,12 @@ const c = [3, 4, 5, 6, 7];
 //   return number <= 8;
 // });
 
-const newC = c.find((number) => {
-  return number > 4;
+// const newC = c.find((number) => {
+//   return number > 4;
+// });
+
+const isTrue = a.some((number) => {
+  return number > 6;
 });
 
-console.log(newC);
+console.log(isTrue);
