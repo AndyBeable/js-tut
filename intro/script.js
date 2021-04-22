@@ -180,6 +180,7 @@
 
 const a = [1, 2, 3, 4, 5];
 const b = [2, 4, 6, 8, 10];
+const c = [3, 4, 5, 6, 7];
 
 // a.forEach((number) => {
 //   console.log(number);
@@ -189,8 +190,12 @@ const b = [2, 4, 6, 8, 10];
 //   return number * 2;
 // });
 
-const newB = b.filter((number) => {
-  return number <= 8;
+// const newB = b.filter((number) => {
+//   return number <= 8;
+// });
+
+const newC = c.find((number) => {
+  return number > 4;
 });
 
-console.log(newB);
+console.log(newC);
