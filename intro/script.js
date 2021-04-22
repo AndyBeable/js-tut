@@ -198,11 +198,29 @@ const c = [3, 4, 5, 6, 7];
 //   return number > 4;
 // });
 
-const isTrue = a.some((number) => {
-  return number > 6;
-});
-const isTrue2 = a.every((number) => {
-  return number < 6;
-});
+// const isTrue = a.some((number) => {
+//   return number > 6;
+// });
+// const isTrue2 = a.every((number) => {
+//   return number < 6;
+// });
 
-console.log(isTrue2);
+// const sum = a.reduce((sum, number) => {
+//   return sum + number;
+// }, 0);
+
+// console.log(sum);
+
+const items = [
+  { price: 10 },
+  { price: 20 },
+  { price: 14 },
+  { price: 1 },
+  { price: 6 },
+];
+
+const total = items.reduce((sum, item) => {
+  return sum + item.price;
+}, 0);
+
+console.log(total);
