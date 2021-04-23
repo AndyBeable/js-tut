@@ -256,17 +256,17 @@
 // const user = new User('Iris', 31);
 // console.log(user);
 
-class User {
-  constructor(name, age) {
-    this.name = name;
-    this.age = age;
-    this.human = true;
-  }
+// class User {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//     this.human = true;
+//   }
 
-  printName() {
-    console.log(this.name);
-  }
-}
+//   printName() {
+//     console.log(this.name);
+//   }
+// }
 
-const user = new User('Dave', 30);
-user.printName();
+// const user = new User('Dave', 30);
+// user.printName();
