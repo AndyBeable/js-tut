@@ -52,14 +52,27 @@
 // });
 
 // ARROW FUNCS CONTINUED
-const button = document.querySelector('button');
+// const button = document.querySelector('button');
 
-button.addEventListener('click', (e) => {
-  console.log('Arrow this');
-  console.log(this);
-});
+// button.addEventListener('click', (e) => {
+//   console.log('Arrow this');
+//   console.log(this);
+// });
 
-button.addEventListener('click', function (e) {
-  console.log('function this');
-  console.log(this);
+// button.addEventListener('click', function (e) {
+//   console.log('function this');
+//   console.log(this);
+// });
+
+// DATA ATTRIBUTES IN JS
+// const test = document.querySelector('[data-test]');
+// test.dataset.test = '535';
+
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const currentClicks = parseInt(button.dataset.clicks);
+    button.dataset.clicks = currentClicks + 1;
+  });
 });
