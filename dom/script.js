@@ -13,13 +13,40 @@
 
 // QUERY SELECTORS
 
-const dataAttributeEl = document.querySelector('[data-test]');
+// const dataAttributeEl = document.querySelector('[data-test]');
 
-const divsWithClasses = document.querySelectorAll('.div-class');
+// const divsWithClasses = document.querySelectorAll('.div-class');
 
-const input = document.querySelector('input');
-console.log(input);
+// const input = document.querySelector('input');
+// console.log(input);
 
-divsWithClasses.forEach((div) => (div.style.color = 'green'));
+// divsWithClasses.forEach((div) => (div.style.color = 'green'));
 
-console.log(divsWithClasses);
+// console.log(divsWithClasses);
+
+// EVENT LISTENERS
+
+// const button = document.querySelector('[data-btn]');
+
+// function greeting() {
+//   console.log('Clicked');
+// }
+
+// button.addEventListener('click', greeting);
+
+// button.removeEventListener('click', greeting);
+
+const button = document.querySelector('[data-btn]');
+const input = document.querySelector('[data-input-text]');
+const form = document.querySelector('[data-form]');
+const anchor = document.querySelector('[anchor-btn]');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  console.log('submitted form');
+});
+
+anchor.addEventListener('click', (e) => {
+  e.preventDefault();
+  console.log('Clicked');
+});
