@@ -1,5 +1,10 @@
-const element = document.createElement('span');
+const divWithId = document.getElementById('div-id');
 
-element.innerText = 'Hello World';
+divWithId.style.color = 'Red';
 
-document.body.appendChild(element);
+const divWithClass = document.getElementsByClassName('div-class');
+console.log(divWithClass);
+
+const divWithClassArray = Array.from(divWithClass);
+
+divWithClassArray.forEach((div) => (div.style.color = 'green'));
