@@ -68,11 +68,21 @@
 // const test = document.querySelector('[data-test]');
 // test.dataset.test = '535';
 
-const buttons = document.querySelectorAll('button');
+// const buttons = document.querySelectorAll('button');
 
-buttons.forEach((button) => {
-  button.addEventListener('click', () => {
-    const currentClicks = parseInt(button.dataset.clicks);
-    button.dataset.clicks = currentClicks + 1;
-  });
-});
+// buttons.forEach((button) => {
+//   button.addEventListener('click', () => {
+//     const currentClicks = parseInt(button.dataset.clicks);
+//     button.dataset.clicks = currentClicks + 1;
+//   });
+// });
+
+// DOM TRAVERSAL
+const grandParent = document.querySelector('#grand-parent');
+const parentOne = grandParent.children[0];
+const parentTwo = parentOne.nextElementSibling;
+const childOne = parentOne.children[0];
+const childTwo = parentOne.children[1];
+
+parentTwo.style.color = 'green';
+childTwo.style.color = 'blue';

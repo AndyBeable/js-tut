@@ -5,6 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOM practice</title>
+    <style>
+      div {
+        color: black;
+      }
+      div > div {
+        margin-left: 0.5rem;
+        padding-left: 0.5rem;
+        border-left: 1px solid #777;
+      }
+    </style>
+  </head>
+  <body>
     <!-- <div id="div-id">This is an id element</div>
     <div class="div-class">This is a class element</div>
     <div class="div-class">This is a class element</div>
@@ -22,10 +34,19 @@
       <a href="https://www.google.co.uk" anchor-btn>Link test</a>
     </form> -->
 
-    <button data-clicks="0">1</button>
+    <!-- <button data-clicks="0">1</button>
     <button data-clicks="0">2</button>
-    <button data-clicks="0">3</button>
+    <button data-clicks="0">3</button> -->
+
+    <div id="grand-parent">
+      Grand Parent
+      <div>
+        Parent 1
+        <div>Child 1</div>
+        <div>Child 2</div>
+      </div>
+      <div>Parent 2</div>
+    </div>
     <script defer src="script.js"></script>
-  </head>
-  <body></body>
+  </body>
 </html>
