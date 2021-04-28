@@ -116,12 +116,87 @@ const favouriteAnimal = 'cat';
 
 // FOR LOOP
 
-for (let i = 0; i < 5; i++) {
-  if (i > 2) break; // continue
-  console.log('Hi');
-}
+// for (let i = 0; i < 5; i++) {
+//   if (i > 2) break; // continue
+//   console.log('Hi');
+// }
 
-for (let i = 0; i <= 10; i++) {
-  if (i === 5) break;
-  console.log(i);
+// for (let i = 0; i <= 10; i++) {
+//   if (i === 5) break;
+//   console.log(i);
+// }
+
+// WHILE LOOP
+// for (let i = 0; i < 5; i++) {
+//   console.log(i);
+// }
+
+// let i = 0;
+// while (i < 5) {
+//   console.log(i);
+//   i++;
+// }
+
+// const person = {
+//   name: 'Andy',
+//   friend: {
+//     name: 'Iris',
+//     friend: {
+//       name: 'Jordi',
+//     },
+//   },
+// };
+
+// let currentPerson = person;
+// while (currentPerson != null) {
+//   console.log(currentPerson.name);
+//   currentPerson = currentPerson.friend;
+// }
+
+// RECURSION
+
+// function printNumber(number) {
+//   if (number > 10) return;
+//   console.log(number);
+//   printNumber(number + 1);
+// }
+
+// printNumber(1);
+
+// let sum = 0;
+// for (let i = 1; i <= 10; i++) {
+//   sum = sum + i;
+// }
+
+// console.log(sum);
+
+// function sumNumbersBelow(number) {
+//   if (number <= 0) return 0;
+//   return number + sumNumbersBelow(number - 1);
+// }
+
+// console.log(sumNumbersBelow(2));
+
+const person = {
+  name: 'Andy',
+  friend: {
+    name: 'Iris',
+    friend: {
+      name: 'Jordi',
+    },
+  },
+};
+
+let currentPerson = person;
+// while (currentPerson != null) {
+//   console.log(currentPerson.name);
+//   currentPerson = currentPerson.friend;
+// }
+
+function printNames(currentPerson) {
+  if (currentPerson == null) return;
+
+  console.log(currentPerson.name);
+  printNames(currentPerson.friend);
 }
+printNames(person);
