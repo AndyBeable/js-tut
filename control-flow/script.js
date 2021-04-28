@@ -93,23 +93,35 @@ const favouriteAnimal = 'cat';
 //     console.log('Dont know that animal');
 // }
 
-const number = 1;
+// const number = 1;
 
-switch (number) {
-  case 0:
-    console.log('It is zero');
-    break;
-  case 1:
-  case 2:
-    console.log('It is small');
-    break;
-  case 3:
-  case 4:
-    console.log('It is medium');
-    break;
-  case 5:
-    console.log('It is large');
-    break;
-  default:
-    console.log('Try again');
+// switch (number) {
+//   case 0:
+//     console.log('It is zero');
+//     break;
+//   case 1:
+//   case 2:
+//     console.log('It is small');
+//     break;
+//   case 3:
+//   case 4:
+//     console.log('It is medium');
+//     break;
+//   case 5:
+//     console.log('It is large');
+//     break;
+//   default:
+//     console.log('Try again');
+// }
+
+// FOR LOOP
+
+for (let i = 0; i < 5; i++) {
+  if (i > 2) break; // continue
+  console.log('Hi');
+}
+
+for (let i = 0; i <= 10; i++) {
+  if (i === 5) break;
+  console.log(i);
 }
