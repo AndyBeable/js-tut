@@ -177,26 +177,43 @@ const favouriteAnimal = 'cat';
 
 // console.log(sumNumbersBelow(2));
 
+// const person = {
+//   name: 'Andy',
+//   friend: {
+//     name: 'Iris',
+//     friend: {
+//       name: 'Jordi',
+//     },
+//   },
+// };
+
+// let currentPerson = person;
+// // while (currentPerson != null) {
+// //   console.log(currentPerson.name);
+// //   currentPerson = currentPerson.friend;
+// // }
+
+// function printNames(currentPerson) {
+//   if (currentPerson == null) return;
+
+//   console.log(currentPerson.name);
+//   printNames(currentPerson.friend);
+// }
+// printNames(person);
+
+// SHORT CIRCUIT EVAL
+function printName(name) {
+  name = name || 'Default';
+  console.log(name);
+}
+
+printName('Andy'); // remove argument to see Default run.
+
 const person = {
   name: 'Andy',
-  friend: {
-    name: 'Iris',
-    friend: {
-      name: 'Jordi',
-    },
+  address: {
+    street: 'Main street',
   },
 };
 
-let currentPerson = person;
-// while (currentPerson != null) {
-//   console.log(currentPerson.name);
-//   currentPerson = currentPerson.friend;
-// }
-
-function printNames(currentPerson) {
-  if (currentPerson == null) return;
-
-  console.log(currentPerson.name);
-  printNames(currentPerson.friend);
-}
-printNames(person);
+console.log(person && person.address && person.address.street);
