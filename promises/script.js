@@ -54,10 +54,57 @@
 //   console.log(e);
 // });
 
-Promise.all([Promise.resolve('1'), Promise.resolve('2'), Promise.resolve('3')])
-  .then((messages) => {
-    console.log(messages);
+// ALL
+
+// Promise.all([Promise.resolve('1'), Promise.resolve('2'), Promise.resolve('3')])
+//   .then((messages) => {
+//     console.log(messages);
+//   })
+//   .catch((error) => {
+//     console.error(error);
+//   });
+
+// ANY
+
+// Promise.any([Promise.reject('1'), Promise.resolve('2'), Promise.resolve('3')])
+//   .then((message) => {
+//     console.log(message);
+//   })
+//   .catch((error) => {
+//     console.error(error);
+//   });
+
+// RACE
+// Promise.race([Promise.reject('1'), Promise.reject('2'), Promise.resolve('3')])
+//   .then((message) => {
+//     console.log(message);
+//   })
+//   .catch((error) => {
+//     console.error(error);
+//   });
+
+// All settled
+// Promise.allSettled([
+//   Promise.reject('1'),
+//   Promise.reject('2'),
+//   Promise.resolve('3'),
+// ])
+//   .then((messages) => {
+//     console.log(messages);
+//   })
+//   .catch((error) => {
+//     console.error(error);
+//   });
+
+const promise = Promise.resolve('here');
+
+promise
+  .then((message) => {
+    console.log(message);
   })
   .catch((error) => {
     console.error(error);
+  })
+  .finally(() => {
+    console.log('finally');
   });
