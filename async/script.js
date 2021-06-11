@@ -55,17 +55,32 @@ function getValueWithDelayError(value, delay) {
   });
 }
 
+// async function doStuff() {
+//   try {
+//     const value1 = await getValueWithDelay('Andy', 350);
+//     console.log(value1);
+//     const value2 = await getValueWithDelay('Beable', 350);
+//     console.log(value2);
+//     const value3 = await getValueWithDelayError('Error', 250);
+//     console.log(value3);
+//   } catch (error) {
+//     console.error(error);
+//   } finally {
+//     console.log('Finally');
+//   }
+// }
+
+// doStuff();
+
 async function doStuff() {
-  try {
-    const value1 = await getValueWithDelay('Andy', 350);
-    console.log(value1);
-    const value2 = await getValueWithDelay('Beable', 350);
-    console.log(value2);
-    const value3 = await getValueWithDelayError('Error', 250);
-    console.log(value3);
-  } catch (error) {
-    console.error(error);
+  for (let i = 0; i <= 10; i++) {
+    const value = await getValueWithDelay(i, 1000);
+    console.log(value);
   }
 }
 
 doStuff();
+
+// getValueWithDelay('Andy', 250).then((message) => console.log(message));
+// getValueWithDelay('Beable', 250).then((message) => console.log(message));
+// getValueWithDelay('Hi', 250).then((message) => console.log(message));
